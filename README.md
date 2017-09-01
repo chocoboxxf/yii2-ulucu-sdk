@@ -116,7 +116,7 @@ if ($result['code'] === 0) {
 ....
 ```
 
-获取门店设备列表
+获取门店设备列表接口
 
 ```php
 $storeId = '12345'; // 门店id
@@ -157,7 +157,7 @@ if ($result['code'] === 0) {
 ....
 ```
 
-获取门店设备列表(含上下线状态)
+获取门店设备列表(含上下线状态)接口
 
 ```php
 $storeId = '12345'; // 门店id
@@ -197,7 +197,7 @@ if ($result['code'] === 0) {
 ....
 ```
 
-获取设备状态
+获取设备状态接口
 
 ```php
 $deviceSn = 'Abcdefg1234567'; // 设备sn
@@ -228,7 +228,7 @@ if ($result['code'] === 0) {
 ....
 ```
 
-获取设备观看实时视频地址
+获取设备观看实时视频地址接口
 
 ```php
 $deviceSn = 'Abcdefg1234567'; // 设备sn
@@ -260,13 +260,14 @@ if ($result['code'] === 0) {
 ....
 ```
 
-获取设备观看回放视频地址
+获取设备观看回放视频地址接口
 
 ```php
 $deviceSn = 'Abcdefg1234567'; // 设备sn
 $time = time() - 3600; // 视频开始时间，时间戳
 $duration = Ulucu::DEFAULT_DURATION; // 观看时长
 $channelId = Ulucu::DEFAULT_CHANNEL_ID; // 通道号
+
 $result = Yii::$app->ulucu->getVideoLiveUrl($deviceSn); // 调用获取设备观看回放视频地址接口
 
 if ($result['code'] === 0) {
