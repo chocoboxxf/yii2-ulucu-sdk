@@ -63,6 +63,8 @@ $result = $ulucu->getDeviceStatus($deviceSn); // 调用获取设备状态接口
 
 获取用户有权限的所有店铺列表和店铺详情接口
 
+接口文档地址：[http://open.ulucu.com/#/doc/device/11/69](http://open.ulucu.com/#/doc/device/11/69)
+
 ```php
 $result = Yii::$app->ulucu->getStoreList(); // 调用获取用户有权限的所有店铺列表和店铺详情接口
 
@@ -118,6 +120,8 @@ if ($result['code'] === 0) {
 
 获取门店设备列表接口
 
+接口文档地址：[http://open.ulucu.com/#/doc/device/11/72](http://open.ulucu.com/#/doc/device/11/72)
+
 ```php
 $storeId = '12345'; // 门店id
 $type = Ulucu::DEVICE_TYPE_NVR; // 设备类型
@@ -159,6 +163,8 @@ if ($result['code'] === 0) {
 
 获取门店设备列表(含上下线状态)接口
 
+接口文档地址：[http://open.ulucu.com/#/doc/device/11/75](http://open.ulucu.com/#/doc/device/11/75)
+
 ```php
 $storeId = '12345'; // 门店id
 
@@ -199,6 +205,8 @@ if ($result['code'] === 0) {
 
 获取设备状态接口
 
+接口文档地址：[http://open.ulucu.com/#/doc/device/11/11](http://open.ulucu.com/#/doc/device/11/11)
+
 ```php
 $deviceSn = 'Abcdefg1234567'; // 设备sn
 
@@ -229,6 +237,8 @@ if ($result['code'] === 0) {
 ```
 
 获取设备观看实时视频地址接口
+
+接口文档地址：[http://open.ulucu.com/#/doc/video/14/17](http://open.ulucu.com/#/doc/video/14/17)
 
 ```php
 $deviceSn = 'Abcdefg1234567'; // 设备sn
@@ -261,6 +271,8 @@ if ($result['code'] === 0) {
 ```
 
 获取设备观看回放视频地址接口
+
+接口文档地址：[http://open.ulucu.com/#/doc/video/14/53](http://open.ulucu.com/#/doc/video/14/53)
 
 ```php
 $deviceSn = 'Abcdefg1234567'; // 设备sn
