@@ -220,7 +220,6 @@ class Ulucu extends Component
         }
         $result = (string)$response->getBody();
 
-        var_dump($result);
         return json_decode($result, true);
     }
 
@@ -256,7 +255,6 @@ class Ulucu extends Component
         }
         $result = (string)$response->getBody();
 
-        var_dump($result);
         return json_decode($result, true);
     }
 }
