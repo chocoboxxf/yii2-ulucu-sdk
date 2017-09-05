@@ -280,7 +280,7 @@ $time = time() - 3600; // 视频开始时间，时间戳
 $duration = Ulucu::DEFAULT_DURATION; // 观看时长
 $channelId = Ulucu::DEFAULT_CHANNEL_ID; // 通道号
 
-$result = Yii::$app->ulucu->getVideoLiveUrl($deviceSn); // 调用获取设备观看回放视频地址接口
+$result = Yii::$app->ulucu->getVideoRecordUrl($deviceSn, $time, $duration, $channelId); // 调用获取设备观看回放视频地址接口
 
 if ($result['code'] === 0) {
     // 调用成功
