@@ -41,6 +41,11 @@ class Ulucu extends Component
     const DEVICE_TYPE_SIMULATED_CAMERA = 4; // 模拟摄像头
     const DEVICE_TYPE_FLOW_STATISTICS = 5; // 客流统计设备
     /**
+     * 视频码率枚举项
+     */
+    const RATE_HIGH = 1000; // 高清
+    const RATE_LOW = 700; // 流畅
+    /**
      * 默认值
      */
     const DEFAULT_VERSION = '1'; // 默认版本号
