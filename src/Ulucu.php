@@ -26,6 +26,7 @@ class Ulucu extends Component
     const DEVICE_API_GET_STORE_DEVICE_LIST = '/h/LpGAf/auth/store_device_list'; // 获取门店设备列表
     const DEVICE_API_GET_STORE_DEVICE_LIST_WITH_STATUS = '/h/LpGAg/auth/store_device_list_with_status'; // 获取门店设备列表(含上下线状态)
     const DEVICE_API_GET_DEVICE_STATUS = '/h/KjNmK/device/get_device_status'; // 获取设备状态
+    const DEVICE_API_GET_STORE_DEVICE_CHANNEL_LIST = '/h/LpGAh/auth/store_device_channel_list'; // 获取门店视频列表
     /**
      * 视频相关接口
      */
@@ -192,6 +193,24 @@ class Ulucu extends Component
 
         // 请求
         return $this->get(static::VIDEO_API_GET_RECORD_URL, $params, $this->version);
+    }
+
+    /**
+     * 获取门店视频列表
+     * @param string $storeId 门店id。支持多传，用逗号隔开。例：10057,10076
+     * @param string|null $lastUpTime 最近修改时间。格式YYYY-MM-DD HH:mm:ss
+     * @return array
+     */
+    public function getStoreDeviceChannelList($storeId, $lastUpTime = null)
+    {
+        // 入参
+        $params = [];
+        $params['store_id'] = $storeId;
+        if (isset($lastUpTime)) {
+            $params['last_uptime'] = $lastUpTime;
+        }
+        // 请求
+        return $this->get(static::DEVICE_API_GET_STORE_DEVICE_CHANNEL_LIST, $params, $this->version);
     }
 
     /**
