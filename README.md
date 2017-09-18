@@ -305,3 +305,50 @@ if ($result['code'] === 0) {
 ....
 ```
 
+获取门店视频列表接口
+
+接口文档地址：[http://open.ulucu.com/#/doc/device/11/174](http://open.ulucu.com/#/doc/device/11/174)
+
+```php
+$storeId = '12345'; // 门店id
+
+$result = Yii::$app->ulucu->getStoreDeviceChannelList($storeId); // 调用获取门店视频列表接口
+
+if ($result['code'] === 0) {
+    // 调用成功
+    // 返回数据格式
+    // {
+    //     "code": 0,
+    //     "data": [
+    //         {
+    //               "device_auto_id": "12345",
+    //               "channel_id": "1",
+    //               "alias": "测试摄像头",
+    //               "sharedevice_flag": 0,
+    //               "upload_rate": "700",
+    //               "property_id": "0",
+    //               "last_uptime": "2017-07-25 10:18:10",
+    //               "index": 1,
+    //               "store_id": "12345",
+    //               "device_id": "Abcdefg1234567",
+    //               "device_type_id": 2,
+    //               "nvr_id": null,
+    //               "nvr_sn": null,
+    //               "nvr_channel_id": null
+    //           }
+    //     ],
+    //     "msg": "请求成功",
+    //     "data_md5": "0acca0b9b2dbb10f6687ee2e0e42e885"
+    // }
+    ....
+} else {
+    // 调用失败
+    // 返回数据格式
+    // {
+    //     "code": 302018,
+    //     "msg": "store_id is not store id"
+    // }
+    ....
+}
+....
+```
